@@ -10,6 +10,11 @@ function HomePage() {
               FAQAccordion
             </Link>
           </li>
+          <li>
+            <Link to={"/Rating"} title="Interactive Rating">
+              Rating Component
+            </Link>
+          </li>
         </ul>
       </p>
     </>
