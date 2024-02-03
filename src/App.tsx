@@ -4,6 +4,7 @@ import HomePage from "./component/pages/HomePage/HomePage";
 import FAQAccordionPage from "./component/pages/FAQAccordion/FAQAccordionPage";
 import NoPage from "./component/pages/NoPage/NoPage";
 import RatingPage from "./component/pages/Rating/RatingPage";
+import NewsletterSignUpPage from "./component/pages/Newsletter-Sign-up/NewsletterSignUpPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index path="/" element={<HomePage />} />
           <Route path="/FAQ-Accordion" element={<FAQAccordionPage />} />
           <Route path="/Rating" element={<RatingPage />} />
+          <Route path="/Newsletter-Signup" element={<NewsletterSignUpPage />} />
           <Route path="*" element={<NoPage />}></Route>
         </Routes>
       </BrowserRouter>

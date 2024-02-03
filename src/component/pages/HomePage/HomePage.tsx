@@ -15,6 +15,11 @@ function HomePage() {
               Rating Component
             </Link>
           </li>
+          <li>
+            <Link to={"/Newsletter-Signup"} title="Newsletter Sign Up">
+              Newsletter-Signup
+            </Link>
+          </li>
         </ul>
       </p>
     </>
