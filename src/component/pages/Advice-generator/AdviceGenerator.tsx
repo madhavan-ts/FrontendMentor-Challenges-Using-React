@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import dividerDesk from "../../../assets/Advice-generator/pattern-divider-desktop.svg";
 import dividerMobile from "../../../assets/Advice-generator/pattern-divider-mobile.svg";
 import dice from "../../../assets/Advice-generator/icon-dice.svg";
