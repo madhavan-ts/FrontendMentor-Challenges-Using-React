@@ -20,6 +20,11 @@ function HomePage() {
               Newsletter-Signup
             </Link>
           </li>
+          <li>
+            <Link to={"/Advice"} title="Advice Generator">
+              Advice Generator
+            </Link>
+          </li>
         </ul>
       </p>
     </>
