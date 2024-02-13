@@ -6,6 +6,7 @@ import NoPage from "./component/pages/NoPage/NoPage";
 import RatingPage from "./component/pages/Rating/RatingPage";
 import NewsletterSignUpPage from "./component/pages/Newsletter-Sign-up/NewsletterSignUpPage";
 import AdviceGenerator from "./component/pages/Advice-generator/AdviceGenerator";
+import CardFormPage from "./component/pages/Card-form/CardFormPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Rating" element={<RatingPage />} />
           <Route path="/Newsletter-Signup" element={<NewsletterSignUpPage />} />
           <Route path="/Advice" element={<AdviceGenerator />} />
+          <Route path="/Card-form" element={<CardFormPage />}></Route>
           <Route path="*" element={<NoPage />}></Route>
         </Routes>
       </BrowserRouter>

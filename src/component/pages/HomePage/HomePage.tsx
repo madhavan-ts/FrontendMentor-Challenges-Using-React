@@ -25,6 +25,11 @@ function HomePage() {
               Advice Generator
             </Link>
           </li>
+          <li>
+            <Link to={"/Card-form"} title="Interactive Card Details Form">
+              Interactive Card Details Form
+            </Link>
+          </li>
         </ul>
       </p>
     </>

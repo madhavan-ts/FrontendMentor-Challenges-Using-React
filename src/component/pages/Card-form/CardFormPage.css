@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+.card__form-page {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Red: hsl(0, 100%, 66%);
+  min-height: 100vh;
+  background-image: url(../../../assets/Card-form/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .15rem;
+  gap: 10rem;
+  background-color: var(--Light-grayish-violet);
+}
+
+.card__form {
+  width: 38rem;
+}
+
+.form__field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+}
+
+.form__field-span-2 {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__inner-field {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.form__inner-field input {
+  width: 50%;
+}
+
+.form__field-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 100%;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: .75rem;
+}
+
+
+input {
+  padding: 1rem;
+  margin-bottom: .5rem;
+  border-radius: .5rem;
+  border: 1px solid var(--Dark-grayish-violet);
+  outline: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+
+
+input:focus {
+  border: 1px solid var(--Very-dark-violet);
+}
+
+.btn {
+  padding: 1rem;
+  background-color: var(--Very-dark-violet);
+  border: none;
+  border-radius: .5rem;
+  color: var(--White);
+  font-family: inherit;
+  letter-spacing: inherit;
+  margin-top: 1rem;
+}
+
+.card__image__container {
+  position: relative;
+}
+
+.image__container--1 {
+  right: 10rem;
+  position: relative;
+  margin-bottom: 3rem;
+  /* box-shadow: .5rem .5rem 1rem 1rem rgba(0, 0, 0, .2); */
+}
+
+.image__container--1 img:last-child {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, .2);
+}
+
+.image__container--1 p {
+  position: absolute;
+  z-index: 999;
+  color: var(--White);
+  text-transform: uppercase;
+}
+
+.logo {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+.card__name {
+  font-size: 1.2rem;
+  left: 3rem;
+  bottom: 3rem;
+}
+
+.card__number {
+  font-size: 2.5rem;
+  left: 3rem;
+  bottom: 8rem;
+  letter-spacing: .3rem;
+}
+
+
+.card__date {
+  font-size: 1.2rem;
+  right: 3rem;
+  bottom: 3rem;
+}
+
+.image__container--2 {
+  position: relative;
+  /* margin-left: 4rem; */
+}
+
+.image__container--2 img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, .2);
+}
+
+.image__container--2 p {
+  font-size: 1.4rem;
+  color: var(--White);
+  position: absolute;
+  right: 10%;
+  top: 45%;
+}
+
+.error-msg {
+  color: var(--Red);
+  font-size: 1.4rem;
+
+}
+
+.success__container {
+  text-align: center;
+}
+
+.success-msg {
+  margin-top: 3rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.success-caption {
+  font-size: 1.5rem;
+  color: var(--light-grayish-violet);
+}
+
+@media only screen and (max-width: 1180px) {
+
+  .card__form-page {
+    padding: 5rem 0;
+    flex-direction: column;
+    background-image: url(../../../assets/Card-form/bg-main-mobile.png);
+    background-position: top;
+    background-size: contain;
+    gap: 0;
+  }
+
+
+  .card__image__container {
+    height: 10rem;
+  }
+
+  .image__container--1 {
+    top: 12rem;
+    left: -1rem;
+    z-index: 9999;
+    width: 40rem;
+  }
+
+  .image__container--2 {
+    top: -30rem;
+    width: 40rem;
+    left: 1rem;
+    z-index: 66;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+
+  .card__image__container {
+    height: 10rem;
+  }
+
+  .image__container--1 {
+    top: 12rem;
+    left: -.5rem;
+    z-index: 9999;
+    width: 35rem;
+  }
+
+  .image__container--2 {
+    top: -25rem;
+    width: 35rem;
+    left: .5rem;
+    z-index: 66;
+  }
+
+  .card__form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+}
