@@ -39,7 +39,7 @@ export default function CardFormPage() {
   // console.log(watchAll);
 
   const formatStr = () => {
-    var str = "";
+    let str = "";
     for (let i = 0; i < watchAll.number.length; i++) {
       if (i % 4 == 0) {
         str += " ";
@@ -110,6 +110,10 @@ export default function CardFormPage() {
                 {errors.number?.type == "pattern" && (
                   <p className="error-msg">Only number are allowed</p>
                 )}
+                {errors.number?.type === "minLength" ||
+                errors.number?.type === "maxLength" ? (
+                  <p className="error-msg">Only 16 numbers are allowed</p>
+                ) : null}
               </div>
               <div className="form__field-grid">
                 <div className="form__field-span-2">
@@ -118,6 +122,10 @@ export default function CardFormPage() {
                     <input
                       placeholder="MM"
                       type="text"
+                      max={12}
+                      min={1}
+                      minLength={2}
+                      maxLength={2}
                       {...register("month", {
                         required: true,
                         min: 1,
@@ -128,6 +136,8 @@ export default function CardFormPage() {
                     />
                     <input
                       placeholder="YY"
+                      minLength={2}
+                      maxLength={2}
                       type="text"
                       {...register("year", {
                         required: true,
@@ -145,6 +155,23 @@ export default function CardFormPage() {
                     errors.year?.type === "pattern") && (
                     <p className="error-msg">Only numbers are allowed</p>
                   )}
+                  {errors.month?.type === "minLength" ||
+                  errors.month?.type === "maxLength" ||
+                  errors.year?.type === "minLength" ||
+                  errors.year?.type === "maxLength" ? (
+                    <p className="error-msg">Only 2 numbers are allowed</p>
+                  ) : null}
+                  {errors.month?.type === "min" ||
+                  errors.month?.type === "max" ? (
+                    <p className="error-msg">
+                      Range must be from 1-12 for Month
+                    </p>
+                  ) : null}
+                  {errors.year?.type === "min" ? (
+                    <p className="error-msg">
+                      Year must start from current year
+                    </p>
+                  ) : null}
                 </div>
                 <div className="form__field-span-2">
                   <label htmlFor="cvc">CVC</label>
@@ -162,6 +189,10 @@ export default function CardFormPage() {
                   {errors.cvc?.type === "required" && (
                     <p className="error-msg">Can't be blank</p>
                   )}
+                  {errors.cvc?.type === "minLength" ||
+                  errors.cvc?.type === "maxLength" ? (
+                    <p className="error-msg">Only three numbers allowed</p>
+                  ) : null}
                   {errors.cvc?.type === "pattern" && (
                     <p className="error-msg">Only numbers are allowed</p>
                   )}
