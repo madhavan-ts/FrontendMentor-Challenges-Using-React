@@ -7,7 +7,7 @@ export default function TipCalculatorPage() {
   const [amount, setAmount] = useState<any>(null);
   const [percent, setPercent] = useState<any>(null);
   const [persons, setPersons] = useState<any>(null);
-  const customInputRef = useRef(null);
+  const customInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleAmountChange = (e: React.FormEvent<HTMLInputElement>) => {
     if (e.currentTarget.value === "" || Number(e.currentTarget.value) === 0) {
@@ -156,7 +156,9 @@ export default function TipCalculatorPage() {
                   setPercent(0);
                   setPersons(0);
                   console.log(customInputRef);
-                  customInputRef.current.value = null;
+                  if (customInputRef.current) {
+                    customInputRef.current.value = "";
+                  }
                 }}
               >
                 RESET
