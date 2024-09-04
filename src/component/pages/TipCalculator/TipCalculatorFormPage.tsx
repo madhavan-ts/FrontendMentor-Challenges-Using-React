@@ -7,22 +7,22 @@ export default function TipCalculatorPage() {
   const [amount, setAmount] = useState<any>(null);
   const [percent, setPercent] = useState<any>(null);
   const [persons, setPersons] = useState<any>(null);
-  const customInputRef = useRef();
+  const customInputRef = useRef(null);
 
-  const handleAmountChange = (e) => {
-    if (e.target.value === "" || Number(e.target.value) === 0) {
+  const handleAmountChange = (e: React.FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.value === "" || Number(e.currentTarget.value) === 0) {
       setAmount(null);
       return;
     }
-    setAmount(Number(e.target.value));
+    setAmount(Number(e.currentTarget.value));
   };
 
-  const handlePercentChange = (e) => {
-    if (e.target.value === "" || Number(e.target.value) === 0) {
+  const handlePercentChange = (e: React.FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.value === "" || Number(e.currentTarget.value) === 0) {
       setPercent(null);
       return;
     }
-    setPercent(Number(e.target.value));
+    setPercent(Number(e.currentTarget.value));
   };
 
   const isValidFields = () => {
@@ -36,12 +36,12 @@ export default function TipCalculatorPage() {
     return true;
   };
 
-  const handlePersonChange = (e) => {
-    if (e.target.value === "" || Number(e.target.value) === 0) {
+  const handlePersonChange = (e: React.FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.value === "" || Number(e.currentTarget.value) === 0) {
       setPersons(null);
       return;
     }
-    setPersons(Number(e.target.value));
+    setPersons(Number(e.currentTarget.value));
   };
   return (
     <>
@@ -155,7 +155,8 @@ export default function TipCalculatorPage() {
                   setAmount(0);
                   setPercent(0);
                   setPersons(0);
-                  customInputRef.current.value = "";
+                  console.log(customInputRef);
+                  customInputRef.current.value = null;
                 }}
               >
                 RESET
