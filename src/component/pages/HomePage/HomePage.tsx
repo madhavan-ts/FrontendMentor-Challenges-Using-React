@@ -30,6 +30,11 @@ function HomePage() {
               Interactive Card Details Form
             </Link>
           </li>
+          <li>
+            <Link to={"/tip-calculator"} title="Tip Calculator">
+              Tip Calculator
+            </Link>
+          </li>
         </ul>
       </p>
     </>
